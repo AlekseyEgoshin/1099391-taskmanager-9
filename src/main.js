@@ -1,8 +1,8 @@
-'use strict'
+'use strict';
 
 const CARD_COUNT = 2;
 
-;(function () {
+(function () {
   const render = (container, template, place) => container.insertAdjacentHTML(place, template);
 
   const createFilter = () => `
