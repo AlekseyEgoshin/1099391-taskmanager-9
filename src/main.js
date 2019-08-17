@@ -459,10 +459,8 @@ const CARD_COUNT = 2;
     </section>
   `;
 
-
   const mainElement = document.querySelector(`.main`);
   const mainHeaderElement = mainElement.querySelector(`.main__control`);
-
 
   render(mainHeaderElement, createMenu(), `beforeend`);
   render(mainElement, createSearchLine(), `beforeend`);
