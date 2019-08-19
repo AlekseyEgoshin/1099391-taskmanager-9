@@ -26,7 +26,9 @@ export const createTaskEditCard = () => `
               class="card__text"
               placeholder="Start typing your text here..."
               name="text"
-            >Here is a card with filled data</textarea>
+            >
+              Here is a card with filled data
+            </textarea>
           </label>
         </div>
     
@@ -34,7 +36,7 @@ export const createTaskEditCard = () => `
           <div class="card__details">
             <div class="card__dates">
               <button class="card__date-deadline-toggle" type="button">
-              date: <span class="card__date-status">yes</span>
+                date: <span class="card__date-status">yes</span>
               </button>
     
               <fieldset class="card__date-deadline">
@@ -62,9 +64,9 @@ export const createTaskEditCard = () => `
                     name="repeat"
                     value="mo"
                   />
-                  <label class="card__repeat-day" for="repeat-mo-4"
-                    >mo</label
-                  >
+                  <label class="card__repeat-day" for="repeat-mo-4">
+                    mo
+                  </label>
                   <input
                     class="visually-hidden card__repeat-day-input"
                     type="checkbox"
