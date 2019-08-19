@@ -6,10 +6,7 @@ export const createTaskEditCard = () => `
           <button type="button" class="card__btn card__btn--archive">
             archive
           </button>
-          <button
-            type="button"
-            class="card__btn card__btn--favorites card__btn--disabled"
-          >
+          <button type="button" class="card__btn card__btn--favorites card__btn--disabled">
             favorites
           </button>
         </div>
@@ -22,11 +19,7 @@ export const createTaskEditCard = () => `
     
         <div class="card__textarea-wrap">
           <label>
-            <textarea
-              class="card__text"
-              placeholder="Start typing your text here..."
-              name="text"
-            >
+            <textarea class="card__text" placeholder="Start typing your text here..." name="text">
               Here is a card with filled data
             </textarea>
           </label>
@@ -64,9 +57,7 @@ export const createTaskEditCard = () => `
                     name="repeat"
                     value="mo"
                   />
-                  <label class="card__repeat-day" for="repeat-mo-4">
-                    mo
-                  </label>
+                  <label class="card__repeat-day" for="repeat-mo-4">mo</label>
                   <input
                     class="visually-hidden card__repeat-day-input"
                     type="checkbox"
@@ -75,9 +66,7 @@ export const createTaskEditCard = () => `
                     value="tu"
                     checked
                   />
-                  <label class="card__repeat-day" for="repeat-tu-4"
-                    >tu</label
-                  >
+                  <label class="card__repeat-day" for="repeat-tu-4">tu</label>
                   <input
                     class="visually-hidden card__repeat-day-input"
                     type="checkbox"
@@ -85,9 +74,7 @@ export const createTaskEditCard = () => `
                     name="repeat"
                     value="we"
                   />
-                  <label class="card__repeat-day" for="repeat-we-4"
-                    >we</label
-                  >
+                  <label class="card__repeat-day" for="repeat-we-4">we</label>
                   <input
                     class="visually-hidden card__repeat-day-input"
                     type="checkbox"
@@ -95,9 +82,7 @@ export const createTaskEditCard = () => `
                     name="repeat"
                     value="th"
                   />
-                  <label class="card__repeat-day" for="repeat-th-4"
-                    >th</label
-                  >
+                  <label class="card__repeat-day" for="repeat-th-4">th</label>
                   <input
                     class="visually-hidden card__repeat-day-input"
                     type="checkbox"
@@ -106,9 +91,7 @@ export const createTaskEditCard = () => `
                     value="fr"
                     checked
                   />
-                  <label class="card__repeat-day" for="repeat-fr-4"
-                    >fr</label
-                  >
+                  <label class="card__repeat-day" for="repeat-fr-4">fr</label>
                   <input
                     class="visually-hidden card__repeat-day-input"
                     type="checkbox"
@@ -116,9 +99,7 @@ export const createTaskEditCard = () => `
                     value="sa"
                     id="repeat-sa-4"
                   />
-                  <label class="card__repeat-day" for="repeat-sa-4"
-                    >sa</label
-                  >
+                  <label class="card__repeat-day" for="repeat-sa-4">sa</label>
                   <input
                     class="visually-hidden card__repeat-day-input"
                     type="checkbox"
@@ -127,9 +108,7 @@ export const createTaskEditCard = () => `
                     value="su"
                     checked
                   />
-                  <label class="card__repeat-day" for="repeat-su-4"
-                    >su</label
-                  >
+                  <label class="card__repeat-day" for="repeat-su-4">su</label>
                 </div>
               </fieldset>
             </div>
@@ -203,11 +182,7 @@ export const createTaskEditCard = () => `
                 name="color"
                 value="black"
               />
-              <label
-                for="color-black-4"
-                class="card__color card__color--black"
-                >black</label
-              >
+              <label for="color-black-4" class="card__color card__color--black">black</label>
               <input
                 type="radio"
                 id="color-yellow-4"
@@ -216,11 +191,7 @@ export const createTaskEditCard = () => `
                 value="yellow"
                 checked
               />
-              <label
-                for="color-yellow-4"
-                class="card__color card__color--yellow"
-                >yellow</label
-              >
+              <label for="color-yellow-4" class="card__color card__color--yellow">yellow</label>
               <input
                 type="radio"
                 id="color-blue-4"
@@ -228,11 +199,7 @@ export const createTaskEditCard = () => `
                 name="color"
                 value="blue"
               />
-              <label
-                for="color-blue-4"
-                class="card__color card__color--blue"
-                >blue</label
-              >
+              <label for="color-blue-4" class="card__color card__color--blue">blue</label>
               <input
                 type="radio"
                 id="color-green-4"
@@ -240,11 +207,7 @@ export const createTaskEditCard = () => `
                 name="color"
                 value="green"
               />
-              <label
-                for="color-green-4"
-                class="card__color card__color--green"
-                >green</label
-              >
+              <label for="color-green-4" class="card__color card__color--green">green</label>
               <input
                 type="radio"
                 id="color-pink-4"
@@ -252,11 +215,7 @@ export const createTaskEditCard = () => `
                 name="color"
                 value="pink"
               />
-              <label
-                for="color-pink-4"
-                class="card__color card__color--pink"
-                >pink</label
-              >
+              <label for="color-pink-4" class="card__color card__color--pink">pink</label>
             </div>
           </div>
         </div>

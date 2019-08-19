@@ -9,10 +9,7 @@ export const createTaskCard = () => `
           <button type="button" class="card__btn card__btn--archive">
             archive
           </button>
-          <button
-            type="button"
-            class="card__btn card__btn--favorites card__btn--disabled"
-          >
+          <button type="button" class="card__btn card__btn--favorites card__btn--disabled">
             favorites
           </button>
         </div>
