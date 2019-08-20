@@ -2,16 +2,16 @@ const CARD_COUNT = 3;
 
 const render = (container, template, place) => container.insertAdjacentHTML(place, template);
 
-import {createFilter} from "./components/filter";
-import {createSearchLine} from "./components/search-line";
-import {createMenu} from "./components/menu";
-import {createSortingLine} from "./components/sorting-line";
+import {createFilter} from './components/filter';
+import {createSearchLine} from './components/search-line';
+import {createMenu} from './components/menu';
+import {createSortingLine} from './components/sorting-line';
 
-import {createTaskCard} from "./components/task-card";
-import {createTaskEditCard} from "./components/edit-task-card";
+import {createTaskCard} from './components/task-card';
+import {createTaskEditCard} from './components/edit-task-card';
 
-import {createBoard} from "./components/board";
-import {createButton} from "./components/button";
+import {createBoard} from './components/board';
+import {createButton} from './components/button';
 
 const mainElement = document.querySelector(`.main`);
 const mainHeaderElement = mainElement.querySelector(`.main__control`);
