@@ -1,5 +1,4 @@
 import {getTask} from './components/data';
-import {getEditTask} from './components/data';
 import {getFilters} from './components/data';
 
 import {createFilter} from './components/filter';
@@ -99,7 +98,7 @@ const boardElement = mainElement.querySelector(`.board`);
 
 render(boardElement, createSortingLine());
 
-renderCard(getEditTask, Card.EDIT);
+renderCard(getTask, Card.EDIT);
 renderCard(getTask, Card.DEFAULT);
 
 render(boardElement, createButton());
