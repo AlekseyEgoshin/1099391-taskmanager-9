@@ -66,7 +66,7 @@ export const createTaskEditCard = ({description, dueDate, repeatingDays, tags, c
     
             <div class="card__hashtag">
               <div class="card__hashtag-list">
-                ${(!tags) ? `` : Array.from(tags).map((tag) => `
+                ${!tags ? null : Array.from(tags).map((tag) => `
                   <span class="card__hashtag-inner">
                   <input
                     type="hidden"
@@ -81,51 +81,6 @@ export const createTaskEditCard = ({description, dueDate, repeatingDays, tags, c
                     delete
                   </button>
                 </span>`).join(``)}
-                
-                <!--<span class="card__hashtag-inner">-->
-                  <!--<input-->
-                    <!--type="hidden"-->
-                    <!--name="hashtag"-->
-                    <!--value="repeat"-->
-                    <!--class="card__hashtag-hidden-input"-->
-                  <!--/>-->
-                  <!--<p class="card__hashtag-name">-->
-                    <!--#repeat-->
-                  <!--</p>-->
-                  <!--<button type="button" class="card__hashtag-delete">-->
-                    <!--delete-->
-                  <!--</button>-->
-                <!--</span>-->
-    <!---->
-                <!--<span class="card__hashtag-inner">-->
-                  <!--<input-->
-                    <!--type="hidden"-->
-                    <!--name="hashtag"-->
-                    <!--value="repeat"-->
-                    <!--class="card__hashtag-hidden-input"-->
-                  <!--/>-->
-                  <!--<p class="card__hashtag-name">-->
-                    <!--#cinema-->
-                  <!--</p>-->
-                  <!--<button type="button" class="card__hashtag-delete">-->
-                    <!--delete-->
-                  <!--</button>-->
-                <!--</span>-->
-          <!---->
-                <!--<span class="card__hashtag-inner">-->
-                  <!--<input-->
-                    <!--type="hidden"-->
-                    <!--name="hashtag"-->
-                    <!--value="repeat"-->
-                    <!--class="card__hashtag-hidden-input"-->
-                  <!--/>-->
-                  <!--<p class="card__hashtag-name">-->
-                    <!--#entertaiment-->
-                  <!--</p>-->
-                  <!--<button type="button" class="card__hashtag-delete">-->
-                    <!--delete-->
-                  <!--</button>-->
-                <!--</span>-->
               </div>
           
               <label>
