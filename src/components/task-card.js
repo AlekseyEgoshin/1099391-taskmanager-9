@@ -52,13 +52,16 @@ export const createTaskCard = ({description, dueDate, repeatingDays, tags, color
 `.trim();
 
 const getCurrentDay = (repeatingDays) => {
-  let i = 0;
-  for (let checkedDay in repeatingDays) {
-    const currentDay = new Date().getDay();
-    if (i !== currentDay) {
-      i++;
-    } else {
-      return repeatingDays[checkedDay];
-    }
-  }
-}
+  const daysOfWeak = [
+    `su`,
+    `mo`,
+    `tu`,
+    `we`,
+    `th`,
+    `fr`,
+    `sa`,
+  ];
+  const currentDay = new Date().getDay();
+
+  return repeatingDays[daysOfWeak[currentDay]];
+};

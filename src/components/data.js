@@ -66,7 +66,7 @@ const String = {
 
 const getRandomArbitrary = (min, max) => {
   return Math.random() * (max - min) + min;
-}
+};
 
 const createTags = () => {
   const tags = [
@@ -85,4 +85,4 @@ const createTags = () => {
   }
 
   return currentTags;
-}
+};
