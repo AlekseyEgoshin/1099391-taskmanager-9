@@ -1,6 +1,6 @@
-export const createFilter = (arr) => `
+export const createFilter = (filters) => `
   <section class="main__filter filter container">
-    ${Array.from(arr).map((filter) => `
+    ${Array.from(filters).map((filter) => `
       <input
         type="radio"
         id="filter__${filter.title}"

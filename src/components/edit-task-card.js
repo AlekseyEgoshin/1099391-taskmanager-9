@@ -1,5 +1,5 @@
 export const createTaskEditCard = ({description, dueDate, repeatingDays, tags, color, isFavorite, isArchive}) => `
-  <article class="card card--edit card--${color} card--repeat">
+  <article class="card card--edit card--${color} ${repeatingDays[new Date().getDay()] ? `` : ``}">
     <form class="card__form" method="get">
       <div class="card__inner">
         <div class="card__control">
@@ -19,9 +19,11 @@ export const createTaskEditCard = ({description, dueDate, repeatingDays, tags, c
     
         <div class="card__textarea-wrap">
           <label>
-            <textarea class="card__text" placeholder="Start typing your text here..." name="text">
-              ${description}
-            </textarea>
+            <textarea
+              class="card__text"
+              placeholder="Start typing your text here..."
+              name="text"
+            >${description}</textarea>
           </label>
         </div>
     

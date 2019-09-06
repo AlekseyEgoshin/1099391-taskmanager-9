@@ -1,5 +1,5 @@
 export const createTaskCard = ({description, dueDate, repeatingDays, tags, color, isFavorite, isArchive}) => `
-  <article class="card card--${color} ${Object.keys(repeatingDays).some((day) => repeatingDays[day]) ? `card--repeat` : ``}">
+  <article class="card card--${color} ${getCurrentDay(repeatingDays) ? `card--repeat` : ``}">
     <div class="card__form">
       <div class="card__inner">
         <div class="card__control">
@@ -50,3 +50,15 @@ export const createTaskCard = ({description, dueDate, repeatingDays, tags, color
     </div>
   </article>
 `.trim();
+
+const getCurrentDay = (repeatingDays) => {
+  let i = 0;
+  for (let checkedDay in repeatingDays) {
+    const currentDay = new Date().getDay();
+    if (i !== currentDay) {
+      i++;
+    } else {
+      return repeatingDays[checkedDay];
+    }
+  }
+}

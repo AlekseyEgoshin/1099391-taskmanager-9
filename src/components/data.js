@@ -7,15 +7,14 @@ export const getTask = () => ({
   dueDate: Date.now() + 1 + Math.floor(Math.random() * 7) * 24 * 60 * 60 * 1000,
   tags: createTags(),
   repeatingDays: {
+    'su': Boolean(Math.round(Math.random())),
     'mo': Boolean(Math.round(Math.random())),
     'tu': Boolean(Math.round(Math.random())),
     'we': Boolean(Math.round(Math.random())),
     'th': Boolean(Math.round(Math.random())),
     'fr': Boolean(Math.round(Math.random())),
     'sa': Boolean(Math.round(Math.random())),
-    'su': Boolean(Math.round(Math.random())),
   },
-  isRepeating: true,
   color: [
     `black`,
     `yellow`,
@@ -65,11 +64,11 @@ const String = {
   MIN: 0,
 };
 
-function getRandomArbitrary(min, max) {
+const getRandomArbitrary = (min, max) => {
   return Math.random() * (max - min) + min;
 }
 
-function createTags() {
+const createTags = () => {
   const tags = [
     `homework`,
     `theory`,

@@ -12,23 +12,22 @@ import {createTaskEditCard} from './components/edit-task-card';
 import {createBoard} from './components/board';
 import {createButton} from './components/button';
 
-function renderCard(cb, count) {
-  const taskListElement = mainElement.querySelector(`.board__tasks`);
+const onMouseClick = () => {
+  const taskCards = document.querySelectorAll(`.card`);
+  taskCards.forEach(function (singleCard) {
+    if (singleCard.classList.contains(`visually-hidden`)) {
+      singleCard.classList.remove(`visually-hidden`);
+    }
+  });
+  loadButton.classList.add(`visually-hidden`);
+};
 
-  let func;
-  switch (count) {
-    case 1:
-      func = createTaskEditCard;
-      break;
-    default:
-      func = createTaskCard;
-      break;
-  }
+const renderCard = (cb, count) => {
+  const taskListElement = mainElement.querySelector(`.board__tasks`);
 
   for (let i = 0; i < count; i++) {
     const checkedCard = cb();
     const all = document.querySelector(`.filter__all-count`);
-    // const overdue = document.querySelector(`.filter__overdue-count`);
     const today = document.querySelector(`.filter__today-count`);
     const favorites = document.querySelector(`.filter__favorites-count`);
     const repeating = document.querySelector(`.filter__repeating-count`);
@@ -54,7 +53,6 @@ function renderCard(cb, count) {
     }
 
     // Обновляем значение фильтра tags
-    // const tagsList = checkedCard.tags;
     if (checkedCard.tags) {
       tags.textContent = parseFloat(tags.textContent) + checkedCard.tags.length;
     }
@@ -66,13 +64,18 @@ function renderCard(cb, count) {
       today.textContent = parseFloat(today.textContent) + 1;
     }
 
-    renderTasks(taskListElement, checkedCard, func, i);
+    renderTasks(taskListElement, checkedCard, count === 1 ? createTaskEditCard : createTaskCard);
+
+    if (i >= (Card.DEFAULT - 1) / 2) {
+      const lastAddedTaskCard = taskListElement.lastElementChild;
+      lastAddedTaskCard.classList.add(`visually-hidden`);
+    }
   }
-}
+};
 
 const Card = {
   EDIT: 1,
-  DEFAULT: 7,
+  DEFAULT: 15,
   EXTRA: 8,
 };
 
@@ -104,7 +107,4 @@ renderCard(getTask, Card.DEFAULT);
 render(boardElement, createButton());
 
 const loadButton = document.querySelector(`.load-more`);
-loadButton.addEventListener(`click`, function () {
-  renderCard(getTask, Card.EXTRA);
-  loadButton.classList.add(`visually-hidden`);
-});
+loadButton.addEventListener(`click`, onMouseClick);
