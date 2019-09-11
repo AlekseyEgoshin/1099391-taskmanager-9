@@ -179,6 +179,6 @@ export class TaskEditCard {
           </div>
         </form>
       </article>
-    `
+    `;
   }
 }

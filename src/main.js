@@ -12,7 +12,7 @@ import {TaskEditCard} from './components/edit-task-card';
 import {Board} from './components/board';
 import {Button} from './components/button';
 
-import {createElement, render, unrender} from './components/utils';
+import {render} from './components/utils';
 
 const onMouseClick = () => {
   const taskCards = document.querySelectorAll(`.card`);
@@ -63,8 +63,6 @@ const renderCard = (taskMock, count) => {
   }
 
   // Обновляем значение фильтра tags
-  console.log(taskMock.tags);
-  console.log(taskMock.tags.size);
   if (taskMock.tags) {
     tags.textContent = parseFloat(tags.textContent) + taskMock.tags.size;
   }
@@ -74,7 +72,7 @@ const renderCard = (taskMock, count) => {
   const dateCard = new Date(taskMock.dueDate).toDateString();
   if (date === dateCard) {
     today.textContent = parseFloat(today.textContent) + 1;
-  };
+  }
 
   // Event listener to change card to edit-card
   task.getElement().
@@ -121,14 +119,6 @@ const Position = {
 const mainElement = document.querySelector(`.main`);
 const mainHeaderElement = mainElement.querySelector(`.main__control`);
 
-const renderTasks = (container, cardInfo, func) => {
-  container.insertAdjacentHTML(`beforeend`, new Array(1)
-    .fill(``)
-    .map(() => cardInfo)
-    .map(func)
-    .join(``));
-};
-
 // Отрисовка меню
 render(mainHeaderElement, new Menu().getElement(), Position.BEFOREEND);
 render(mainElement, new SearchLine().getElement(), Position.BEFOREEND);
@@ -145,9 +135,6 @@ const taskMocks = new Array(Card.DEFAULT)
   .map(getTask);
 let i = 0;
 taskMocks.forEach((taskMock) => renderCard(taskMock, i++));
-
-// renderCard(getTask, Card.EDIT);
-// renderCard(getTask, Card.DEFAULT);
 
 render(boardElement, new Button().getElement(), Position.BEFOREEND);
 
